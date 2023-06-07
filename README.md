@@ -17,6 +17,7 @@
 
 ## Installation
 
+if linux
 ```sh
 sudo chmod +x *
 ```
@@ -27,6 +28,14 @@ pip install -r requirements.txt
 python main.py
 ```
 
+if windows
+
+```sh
+pip install -r requirements.txt
+```
+```sh
+python main.py
+```
 
 
 
