@@ -151,7 +151,7 @@ text = """
   _| |_| |\  |____) | |_) | | \ \| |__| |  | |   
  |_____|_| \_|_____/|____/|_|  \_\\ ____/    |_|    v1
  _______________________________________________________________________
- |Don't forget to add the http/https proxy list!                                  |
+ |Don't forget to add the http/https proxy list!                       |
  |Do not forget that your list must not contain less than 8 characters!|
  |Keep your wordlist short so it can read utf-8                        |
  -----------------------------------------------------------------------
