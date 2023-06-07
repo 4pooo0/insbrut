@@ -37,7 +37,11 @@ pip install -r requirements.txt
 python main.py
 ```
 
-
+## Use
+- Add http/https proxy server to proxy list
+- Specify your username after opening the program
+- Choose whether to create a wordlist with the cupp tool
+- Then the attack begins
 
 ## License
 
