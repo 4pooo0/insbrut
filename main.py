@@ -38,7 +38,7 @@ def start_firefox_with_proxy(proxy):
         geckodriver_path = 'geckodriver.exe'
         print('windows')
     elif platform.system() == 'Linux':
-        firefox_path = '/usr/bin/firefox'
+        firefox_path = '/usr/lib/firefox-esr/firefox-esr'
         geckodriver_path = 'geckodriver'
         print('linux')
     else:
