@@ -19,7 +19,11 @@
 
 ```sh
 sudo chmod +x *
+```
+```sh
 pip install -r requirements.txt
+```
+```sh
 python main.py
 ```
 
