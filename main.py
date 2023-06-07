@@ -49,7 +49,7 @@ def start_firefox_with_proxy(proxy):
     firefox_options.binary_location = firefox_path
 
     profile = webdriver.FirefoxProfile()
-    #firefox_options.add_argument("--headless")
+    firefox_options.add_argument("--headless")
     firefox_options.add_argument(f"--proxy-server={proxy}")
     firefox_options.add_argument("--private")
     firefox_options.add_argument('--disable-gpu')
