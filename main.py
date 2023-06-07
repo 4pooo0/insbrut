@@ -115,8 +115,9 @@ def start_browsing_with_proxies(proxy_file, nameuser, pas_lis):
 
                 time.sleep(1.8)
                 i += 1
-
-            except selenium.common.exceptions.NoSuchElementException:
+    
+            except Exception as e:
+                print(str(e))
                 print(Fore.GREEN + "🔑🔑PASSWORD FOUND🔑🔑 : {}".format(my_list[i - 1]) + Fore.RESET)
                 with open("output-key.txt", "w") as g:
                     g.write(my_list[i - 1])
@@ -131,8 +132,6 @@ def start_browsing_with_proxies(proxy_file, nameuser, pas_lis):
                     print("⚠please write y or n⚠")
 
                 exit()
-            except Exception as e:
-                print(str(e))
                 exit()
 
         time.sleep(30)
